@@ -1,0 +1,80 @@
+{
+	"name": "tumoheader",
+	"displayName": "TUMO Header",
+	"description": "TUMO header for VSCode",
+	"version": "0.0.1",
+	"publisher": "Hypermario",
+	"icon": "TUMO.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Hypermario/vscode-TUMOheader"
+	},
+	"bugs": {
+		"url": "https://github.com/Hypermario/vscode-TUMOheader/issues"
+	},
+	"homepage": "https://github.com/Hypermario/vscode-TUMOheader",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.6.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configuration": {
+			"properties": {
+				"TUMOheader.username": {
+					"type": "string",
+					"description": "Username to use in TUMO headers"
+				},
+				"TUMOheader.city": {
+					"type": "string",
+					"description": "City to use in TUMO headers"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "TUMOheader.insertHeader",
+				"title": "Insert TUMO header",
+				"when": "editorTextFocus"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "TUMOheader.insertHeader",
+				"key": "ctrl+alt+h",
+				"mac": "cmd+alt+h",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.66.0",
+		"@typescript-eslint/eslint-plugin": "^5.21.0",
+		"@typescript-eslint/parser": "^5.21.0",
+		"@vscode/test-electron": "^2.1.3",
+		"eslint": "^8.14.0",
+		"glob": "^8.0.1",
+		"mocha": "^9.2.2",
+		"typescript": "^4.6.4"
+	},
+	"dependencies": {
+		"moment": "^2.29.3"
+	}
+}
