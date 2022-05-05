@@ -1,70 +1,58 @@
-# TUMOheader README
+<img
+  src="https://raw.githubusercontent.com/hypermario/vscode-TUMOheader/master/TUMO.png" 
+  width=128>
 
-This is the README for your extension "TUMOheader". After writing up a brief description, we recommend including the following sections.
+# TUMO Header for VSCode
 
-## Features
+This extension provides the TUMO header integration in VS Code.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+```js
+/* ************************************************************************** */
+/*                                                                            */
+/*                                             ________     ______________    */
+/*     main.js                                (__   ___)   (  _   _   ___ )   */
+/*                                               | | | |   | | | | | |  | |   */
+/*                                               | | | |___| | | | | |__| |   */
+/*     By: jeremy.molvaut                        (_) (_______) (_) (______)   */
+/*     Created: 00/00/00 00:00:00                                   Paris     */
+/*                                                                            */
+/* ************************************************************************** */
+```
 
-For example if there is an image subfolder under your extension project workspace:
+## Install
 
-\!\[feature X\]\(images/feature-x.png\)
+Launch Quick Open with <kbd>⌘</kbd>+<kbd>P</kbd> and enter
+```
+ext install TUMOheader
+```
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Usage
 
-## Requirements
+### Insert a header
+ - **macOS** : <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>H</kbd>
+ - **Linux** / **Windows** : <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>H</kbd>.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Header is automatically updated on save.
 
-## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Configuration
 
-For example:
+Default values for **username** and **email** are imported from environment variables.
 
-This extension contributes the following settings:
+To override these values, specify these properties in *User Settings* :
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+```ts
+{
+  "TUMOheader.username": string,
+  "TUMOheader.email": string
+}
+```
 
-## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Issues
 
-## Release Notes
+In case of a bug, or missing feature, please create a [Github Pull Request](https://github.com/Hypermario/vscode-TUMOheader/pulls).
 
-Users appreciate release notes as you update your extension.
+## License
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+MIT
