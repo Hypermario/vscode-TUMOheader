@@ -44,7 +44,7 @@ To override these values, specify these properties in *User Settings* :
 ```ts
 {
   "TUMOheader.username": string,
-  "TUMOheader.email": string
+  "TUMOheader.city": string
 }
 ```
 
