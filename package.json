@@ -15,7 +15,7 @@
 	"homepage": "https://github.com/Hypermario/vscode-TUMOheader",
 	"license": "MIT",
 	"engines": {
-		"vscode": "^1.6.0"
+		"vscode": "^1.66.0"
 	},
 	"categories": [
 		"Other"
